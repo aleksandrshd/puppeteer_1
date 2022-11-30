@@ -1,0 +1,23 @@
+{
+  "name": "puppeteer_1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "scrapeLogIn": "node scrapeWithLogIn.js",
+    "scrapeOpened": "node scrapeFromOpenedBrowser.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aleksandrshd/puppeteer_1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aleksandrshd/puppeteer_1/issues"
+  },
+  "homepage": "https://github.com/aleksandrshd/puppeteer_1#readme",
+  "dependencies": {
+    "puppeteer": "^19.3.0"
+  }
+}
