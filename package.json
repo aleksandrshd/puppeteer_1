@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "scrapeLogIn": "node scrapeWithLogIn.js",
-    "scrapeOpened": "node scrapeFromOpenedBrowser.js"
+    "scrapeOpened": "node scrapeFromOpenedBrowser.js",
+    "scrapeVVOpened": "node scrapeVVFromOpenedBrowser.js"
   },
   "repository": {
     "type": "git",
