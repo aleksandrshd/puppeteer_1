@@ -31,6 +31,12 @@ const scrapeFromOpenedBrowser = async () => {
       return results.map(res => res.title);
     });
 
+    const resultArray = [];
+
+    for (let i=0; i < pricesArray.length; i++) {
+      resultArray.push({name: namesArray[i], price: pricesArray[i]});
+    }
+
    /* const elementsArray = await page.$$eval(elementsSelector, results => {
       return results.map(res => {
         const element = res.innerHTML;
@@ -43,7 +49,7 @@ const scrapeFromOpenedBrowser = async () => {
 
     await browser.close();
 
-    return {pricesArray, namesArray};
+    return {pricesArray, namesArray, resultArray};
 
   } catch (err) {
     console.log(err);
