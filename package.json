@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "vkusvillScrFOB": "node vkusvillScrFOB.js"
+    "vkusvillScrFOB": "node vkusvillScrFOB.js",
+    "newProductsScrVkusvill": "node newProductsScrVkusvill.js"
   },
   "repository": {
     "type": "git",

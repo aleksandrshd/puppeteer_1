@@ -2,9 +2,9 @@ const puppeteer = require('puppeteer');
 
 const chromeUrl = 'http://127.0.0.1:9222';
 
-const url = 'https://vkusvill.ru/cart/';
-const pricesSelector = '.OrderFormProdSliderSwiperWrapper[data-list-name="Корзина Зеленые ценники"] .Price--green-label .Price__value';
-const namesSelector = '.OrderFormProdSliderSwiperWrapper[data-list-name="Корзина Зеленые ценники"] .ProductCard__link';
+const url = 'https://vkusvill.ru/';
+const pricesSelector = '.ProductCards__list[data-list-name="Новинки на главной"] .Price__value';
+const namesSelector = '.ProductCards__list[data-list-name="Новинки на главной"] .ProductCard__link';
 
 const scrapeFromOpenedBrowser = async () => {
   try {
@@ -20,7 +20,7 @@ const scrapeFromOpenedBrowser = async () => {
 
     await page.goto(url);
 
-    await page.waitForSelector('.OrderFormProdSliderSwiperWrapper');
+    await page.waitForSelector('.ProductCards__list[data-list-name="Новинки на главной"]');
 
     const pricesArray = await page.$$eval(pricesSelector, results => {
       return results.map(res => res.textContent);
