@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "scrapeLogIn": "node scrapeWithLogIn.js",
-    "scrapeOpened": "node scrapeFromOpenedBrowser.js",
-    "scrapeVVOpened": "node scrapeVVFromOpenedBrowser.js"
+    "vkusvillScrFOB": "node vkusvillScrFOB.js"
   },
   "repository": {
     "type": "git",
