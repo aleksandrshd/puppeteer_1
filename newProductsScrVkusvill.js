@@ -38,7 +38,18 @@ const scrapeFromOpenedBrowser = async () => {
 
     await browser.close();
 
-    return {pricesArray, namesArray, resultArray};
+    const result = await page.evaluate(() => {
+      const container = document.querySelector('.ProductCard__content');
+      const title = container.querySelector('.ProductCard__link').title;
+      const price = container.querySelector('.Price__value').innerText;
+
+      return {
+        title,
+        price
+      }
+    });
+
+    return {pricesArray, namesArray, resultArray, result};
 
   } catch (err) {
     console.log(err);
